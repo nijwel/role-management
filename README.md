@@ -1,11 +1,29 @@
 1 => git clone git@github.com:nijwel/role-management.git
 <br>
-2 => php artisan key:generate
+2 => npm install
 <br>
-3 => php artisan migrate
+3 => composer install
 <br>
-4 => php artisan db:seed --class=CreateUserSeeder
+4 => Setup .env file (To setup your .env, kindly duplicate your .env.example file and rename the duplicated file to .env)
 <br>
+5 => Setup Database
+
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=role-management
+    DB_USERNAME=root
+    DB_PASSWORD=
+<br>
+6 => npm run dev
+<br>
+7 => php artisan key:generate
+<br>
+8 => php artisan migrate
+<br>
+9 => php artisan db:seed --class=CreateUserSeeder
+<br>
+10 => php artisan server
 
 <h2>Project description:</h2>
 <p>Please login as a admin. After login  You will see a navber where hade some menu you can access this.</p>
