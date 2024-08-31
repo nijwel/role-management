@@ -15,9 +15,9 @@ class IsEditManager
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!auth()->user()->e_manager == 1) {
-            return redirect()->back();
-        }
+        // if (!auth()->user()->e_manager == 1) {
+        //     return redirect()->back();
+        // }
         return $next($request);
     }
 }

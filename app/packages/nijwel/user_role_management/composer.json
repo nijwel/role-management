@@ -1,0 +1,24 @@
+{
+    "name": "ijwel/user_role_management",
+    "description": "This is a package for user role management",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nijwel",
+            "email": "nijwel09@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "nijwel\\user_role_management\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "nijwel\\user_role_management\\RoleManagementServiceProvider"
+            ]
+        }
+    }
+}

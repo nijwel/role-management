@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\ManagerController;
+use App\Http\Controllers\ChatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,5 +42,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
      Route::get('edit/{edit}',[ManagerController::class, 'edit'])->name('edit.manager')->middleware(['auth', 'is-edit-manager']);
      Route::post('update/{edit}',[ManagerController::class, 'update'])->name('update.manager');
      Route::get('delete/{edit}',[ManagerController::class, 'destroy'])->name('delete.manager')->middleware(['auth', 'is-delete-manager']);
+   });
+
+   Route::group(['prefix' => 'chat'], function() {
+       Route::get('/',[ChatController::class, 'index'])->name('chat');
+       Route::post('/send',[ChatController::class, 'store'])->name('send');
+       Route::get('/fetch',[ChatController::class, 'show'])->name('fetch');
+       Route::get('/unread/{receiveId}',[ChatController::class, 'unread'])->name('unread');
    });
 });

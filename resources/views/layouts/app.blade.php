@@ -45,6 +45,9 @@
                                           <a class="nav-link" href="{{ route('index.manager') }}">Manager</a>
                                         </li>
                                     @endif
+                                    <li class="nav-item text-danger">
+                                      <a class="nav-link" href="{{ route('chat') }}">Chat</a>
+                                    </li>
                                 @endif
                               </ul>
                             </div>

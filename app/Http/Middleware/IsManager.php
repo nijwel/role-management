@@ -14,10 +14,10 @@ class IsManager
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
-    {   
-        if (!auth()->user()->manager == 1) {
-            return redirect()->back();
-        }
+    {
+        // if (!auth()->user()->manager == 1) {
+        //     return redirect()->back();
+        // }
         return $next($request);
     }
 }

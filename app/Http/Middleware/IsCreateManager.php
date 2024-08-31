@@ -15,9 +15,9 @@ class IsCreateManager
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!auth()->user()->c_manager == 1) {
-            return redirect()->back();
-        }
+        // if (!auth()->user()->c_manager == 1) {
+        //     return redirect()->back();
+        // }
         return $next($request);
     }
 }

@@ -15,9 +15,9 @@ class IsDeleteEmployee
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!auth()->user()->d_employee == 1) {
-            return redirect()->back();
-        }
+        // if (!auth()->user()->d_employee == 1) {
+        //     return redirect()->back();
+        // }
         return $next($request);
     }
 }
