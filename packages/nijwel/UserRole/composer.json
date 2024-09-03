@@ -1,0 +1,24 @@
+{
+    "name": "nijwel/user-role",
+    "description": "A user role management package for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nijwel",
+            "email": "nijwel09@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Nijwel\\UserRole\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nijwel\\UserRole\\UserRoleServiceProvider"
+            ]
+        }
+    }
+}
